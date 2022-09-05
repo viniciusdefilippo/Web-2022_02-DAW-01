@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+<style>
+    html {
+        font-size: 16px;
+    }
+
+    .ems li {
+        font-size: 1.5em;
+        color: red;
+    }
+
+    .rems li {
+        font-size: 1.5rem;
+        color: green;
+    }
+</style>
+
+<body>
+    <h1>Unidade de medida: EM</h1>
+    <p>html font-size: 16px</p>
+    <p>ems li font-size: 1.5em</p>
+    <ul class="ems">
+        <li>Elemento Pai 16 * 1.5 = 24px (em)</li>
+        <li>Elemento Pai 16 * 1.5 = 24px (em)</li>
+        <li>Elemento Pai 16 * 1.5 = 24px (em)
+            <ul>
+                <li>Elemento filho: 24 x 1.5 = 36px (em)</li>
+                <li>Elemento filho: 24 x 1.5 = 36px (em)
+                    <ul>
+                        <li>Elemento filho do filho 36 x 1.5 = 54px (em)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+    <h1>Unidade de medida: REM</h1>
+    <p>html font-size: 16px</p>
+    <p>rems li font-size: 1.5em</p>
+    <ul class="rems">
+        <li>Elemento Pai 16 * 1.5 = 24px (rem)</li>
+        <li>Elemento Pai 16 * 1.5 = 24px (rem)</li>
+        <li>Elemento Pai 16 * 1.5 = 24px (rem)
+            <ul>
+                <li>Elemento filho: 16 x 1.5 = 24px (rem)</li>
+                <li>Elemento filho: 16 x 1.5 = 24px (rem)
+                    <ul>
+                        <li>Elemento filho do filho 16 x 1.5 = 24px (rem)</li>
+                    </ul>
+                </li>
+            </ul>
+        </li>
+    </ul>
+</body>
+
+</html>

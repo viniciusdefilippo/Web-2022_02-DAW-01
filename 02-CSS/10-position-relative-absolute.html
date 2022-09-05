@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS</title>
+</head>
+<style>
+    .parent {
+        width: 200px;
+        margin-top: 100px;
+        margin-right: auto;
+        margin-bottom: 0;
+        margin-left: auto;
+        /* margin: 100px auto 0 auto; */
+        color: white;
+        padding: 150px;
+        background-color: #0074d9;
+        position: relative;
+    }
+
+    .element {
+        background-color: rgba(0, 0, 0, 0.2);
+        padding: 20px;
+        color: rgba(255, 255, 255, .4);
+
+        position: absolute;
+        /* top: 0px; */
+        left: 0px;
+        right: 0px;
+        bottom: 0px;
+    }
+</style>
+
+<body>
+    <div class="parent">
+        Elemento Pai
+        <div class="element">Elemento Filho</div>
+    </div>
+</body>
+
+</html>
