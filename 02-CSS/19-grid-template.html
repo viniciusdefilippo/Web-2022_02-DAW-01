@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- FONTS -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&family=Poppins:wght@400;500;700&display=swap"
+        rel="stylesheet" />
+    <title>CSS</title>
+</head>
+
+<style>
+    /* ========= RESET ========= */
+    html {
+        box-sizing: border-box;
+    }
+
+    *,
+    *::before,
+    *::after {
+        box-sizing: inherit;
+    }
+
+    * {
+        margin: 0;
+        padding: 0;
+    }
+
+    ul {
+        list-style: none;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+    }
+
+
+    /* ========= VARIABLES ========= */
+
+    /*
+     * https://developer.mozilla.org/pt-BR/docs/Web/CSS/:root
+     * A pseudo-classe CSS  :root se equipara à raíz de uma árvore, 
+     * que por sua vez representa o documento. Aplicado ao HTML, 
+     * :root representa o elemento <html> e é identico ao seletor html,
+     * exceto que sua especificidade é mais alta.
+     */
+    :root {
+        font-size: 62.5%;
+        --standart-padding: 2.0rem;
+
+        /* fonts type*/
+        --title-font: 'Poppins', sans-serif;
+        --text-font: 'DM Sans', sans-serif;
+
+        /* fonts size */
+        --title-font-size: 3.0rem;
+        --text-font-size: 1.6rem;
+
+        /* colors */
+        --hue: 100;
+        /* HSL color mode */
+        --base-color-one: hsl(var(--hue) 36% 57%);
+        --base-color-two: hsl(var(--hue) 65% 88%);
+        --base-color-three: hsl(var(--hue) 57% 53%);
+        --title-color: hsl(var(--hue) 41% 10%);
+        --text-color: hsl(0 0% 46%);
+        --text-color-light: hsl(0 0% 98%);
+        --background-color: hsl(0 0% 98%);
+    }
+
+    body {
+        font: 400 var(--text-font-size) var(--text-font);
+        color: var(--text-color);
+        background: var(---background-color);
+    }
+
+    .title {
+        font: 700 var(--title-font-size) var(--title-font);
+        color: var(--title-color);
+    }
+
+
+    /* ========= LAYOUT ========= */
+    .container {
+        display: flex;
+        flex-direction: column;
+        min-height: 100vh;
+    }
+
+    header {
+        background-color: var(--base-color-one);
+        padding: var(--standart-padding);
+        text-align: center;
+        /* 
+         * ao invés de marcar em que coluna inicia e em que coluna termina
+         * é possível utilizar o span que define quantas colunas devem ser
+         * ocupadas, ou seja, nesse caso deve ser ocupado o espaço de 3 colunas
+         * https://www.digitalocean.com/community/tutorials/css-css-grid-layout-span-keyword 
+         */
+        grid-column: span 3;
+    }
+
+    main {
+        padding: var(--standart-padding);
+    }
+
+    nav {
+        background-color: var(--base-color-two);
+        padding: var(--standart-padding);
+    }
+
+    aside {
+        background-color: var(--base-color-three);
+        padding: var(--standart-padding);
+        color: var(--text-color-light);
+    }
+
+    footer {
+        background-color: var(--base-color-one);
+        padding: var(--standart-padding);
+        color: var(--text-color-light);
+        text-align: center;
+        grid-column: span 3;
+    }
+
+    @media (min-width: 768px) {
+        .container {
+            display: grid;
+            /*
+             * In addition to creating grids using lengths and percentages, 
+             * we can use the fr unit to flexibly size grid rows and columns. 
+             * This unit represents one fraction of the available space in 
+             * the grid container.
+             */
+            grid-template-columns: 200px 1fr 200px;
+            grid-template-rows: auto 1fr auto;
+        }
+    }
+</style>
+
+<body>
+    <div class="container">
+        <header class="title">Header</header>
+        <nav>Navigation</nav>
+        <main>
+            <h1 class="title">Main</h1>
+            <p>Vestibulum consectetur sit amet nisi ut consectetur. Praesent efficitur, nibh vitae fringilla
+                scelerisque,
+                est neque faucibus quam, in iaculis purus libero eget mauris. Curabitur et luctus sapien, ac gravida
+                orci.
+                Aliquam erat volutpat. In hac habitasse platea dictumst. Aenean commodo, arcu a commodo efficitur,
+                libero
+                dolor mollis turpis, non posuere orci leo eget enim. Curabitur sit amet elementum orci, pulvinar
+                dignissim
+                urna. Morbi id ex eu ex congue laoreet. Aenean tincidunt dolor justo, semper pretium libero luctus nec.
+                Ut
+                vulputate metus accumsan leo imperdiet tincidunt. Phasellus nec rutrum dolor. Cras imperdiet
+                sollicitudin
+                arcu, id interdum nibh fermentum in.</p>
+        </main>
+        <aside>Related links</aside>
+        <footer>Footer</footer>
+    </div>
+</body>
+
+</html>
