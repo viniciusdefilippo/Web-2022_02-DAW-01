@@ -1,0 +1,34 @@
+/* ***********************************
+ *
+ * >>> VARS
+ *
+ * ***********************************/
+
+ :root {
+
+    /* COLORS */
+    --bg-color: #FFFFFF;
+    --bg-color-cell-one: #ececec;
+    --bg-color-cell-two: #e0e0e0;
+    --quote-text-color: #777;
+    --main-text-color: #141414;
+
+    /* FONTS */
+    --header-text-font: 'Lato', sans-serif;
+    --quote-text-font: 'Oswald', sans-serif;
+    --text-font: 'Dosis', sans-serif;
+    --header-text-height: 42px;
+    --text-height: 16px;
+    --quotes-height: 24px;
+    --title-height: 36px;
+    --responsive-text-height: 14px;
+    --responsive-quotes-height: 14px;
+    --responsive-title-height: 24px;
+
+    /* IMAGES */
+    --hero-bg-image: url("../img/steve_jobs-wide.jpg");
+    --nutshell-bg-image: url("../img/stevejobs.jpg");
+
+    /* OTHERS */
+    --box-shadow: 1px 6px 20px 7px rgba(0, 0, 0, 0.2);
+}

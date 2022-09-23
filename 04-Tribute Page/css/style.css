@@ -1,0 +1,232 @@
+/* ***********************************
+ *
+ * >>> HEADER
+ *
+ * ***********************************/
+
+.header {
+    grid-area: header;
+    margin: 12px;
+}
+
+.header__title {
+    font-family: var(--header-text-font);
+    font-size: var(--header-text-height);
+    text-align: center;
+}
+
+.header__quote {
+    text-align: right;
+}
+
+.header__quote,
+.footer__quote {
+    font-size: var(--responsive-quotes-height);
+    font-family: var(--quote-text-font);
+    font-weight: bold;
+    color: var(--quote-text-color);
+}
+
+
+
+
+/* ***********************************
+ *
+ * >>> HERO
+ *
+ * ***********************************/
+
+.hero {
+    grid-area: hero;
+
+    /* The image used */
+    background-image: var(--hero-bg-image);
+    /* Used if the image is unavailable */
+    background-color: var(--bg-color);
+    /* Center the image */
+    background-position: center;
+    /* Do not repeat the image */
+    background-repeat: no-repeat;
+    /* Resize the background image to cover the entire container */
+    background-size: cover;
+
+    height: 50vh;
+    background-attachment: scroll;
+}
+
+
+
+
+/* ***********************************
+ *
+ * >>> TIMELINE
+ *
+ * ***********************************/
+
+.timeline {
+    grid-area: timeline;
+
+    margin: 12px;
+    line-height: 18px;
+}
+
+.timeline__title,
+.nutshell__title {
+    font-size: var(--responsive-title-height);
+}
+
+.timeline__events-list,
+.nutshell__events-list {
+    box-shadow: var(--box-shadow);
+}
+
+.timeline__event {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+
+.timeline__event,
+.nutshell__event {
+    border-top: 1.5px solid var(--quote-text-color);
+}
+
+.timeline__datetime,
+.nutshell__topic {
+    padding: 8px;
+    font-weight: bold;
+    background-color: var(--bg-color-cell-one);
+}
+
+.timeline__description,
+.nutshell__info {
+    padding: 8px;
+    background-color: var(--bg-color-cell-two);
+}
+
+
+
+
+/* ***********************************
+ *
+ * >>> NUTSHELL
+ *
+ * ***********************************/
+
+.nutshell {
+    grid-area: nutshell;
+
+    margin: 12px;
+    line-height: 18px;
+}
+
+.nutshell__img {
+
+    background-image: var(--nutshell-bg-image);
+    /* Used if the image is unavailable */
+    background-color: var(--bg-color);
+    /* Center the image */
+    background-position: center;
+    /* Do not repeat the image */
+    background-repeat: no-repeat;
+    /* Resize the background image to cover the entire container */
+    background-size: cover;
+
+    height: 30vh;
+}
+
+.nutshell__event {
+    display: flex;
+    flex-direction: column;
+}
+
+
+
+
+/* ***********************************
+ *
+ * >>> FOOTER
+ *
+ * ***********************************/
+
+.footer {
+    grid-area: footer;
+
+    margin: 12px;
+    color: var(--quote-text-color);
+}
+
+
+
+
+/* ***********************************
+ *
+ * >>> MEDIA QUERIES
+ *
+ * ***********************************/
+
+@media (min-width: 800px) {
+
+    .container {
+        display: grid;
+        min-height: 100vh;
+        grid-template-areas:
+            "header   header   header"
+            "hero     hero     hero"
+            "timeline timeline nutshell"
+            "footer   footer   footer"
+        ;
+        font-size: var(--text-height);
+    }
+
+    .header__title {
+        text-align: left;
+        margin: 0 0 0 24px;
+    }
+
+    .header__quote {
+        font-size: var(--quotes-height);
+        text-align: right;
+        margin: 0 24px 0 0;
+    }
+
+    .hero {
+        height: 100vh;
+        background-attachment: fixed;
+    }
+
+    .timeline {
+        align-self: flex-end;
+    }
+
+    .timeline,
+    .nutshell {
+        margin: 48px;
+        line-height: 24px;
+    }
+
+    .timeline__title,
+    .nutshell__title {
+        font-size: var(--title-height);
+    }
+
+    .timeline__datetime,
+    .timeline__description,
+    .nutshell__topic,
+    .nutshell__info {
+        padding: 12px;
+    }
+
+    .nutshell__img {
+        height: 30vh;
+    }
+
+    .footer__quote {
+        font-size: var(--quotes-height);
+    }
+
+    .footer__quote,
+    .footer_content {
+        text-align: left;
+        margin: 24px;
+    }
+}

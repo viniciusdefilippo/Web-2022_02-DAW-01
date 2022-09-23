@@ -1,0 +1,21 @@
+/* ***********************************
+ *
+ * >>> LAYOUT
+ *
+ * ***********************************/
+
+ .container {
+    background-color: var(--bg-color);
+    font-family: var(--text-font);
+    color: var(--main-text-color);
+    font-size: var(--responsive-text-height);
+    display: grid;
+    min-height: 100vh;
+    grid-template-areas:
+        "header"
+        "hero"
+        "timeline"
+        "nutshell"
+        "footer"
+    ;
+}
