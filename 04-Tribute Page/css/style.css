@@ -166,18 +166,6 @@
 
 @media (min-width: 800px) {
 
-    .container {
-        display: grid;
-        min-height: 100vh;
-        grid-template-areas:
-            "header   header   header"
-            "hero     hero     hero"
-            "timeline timeline nutshell"
-            "footer   footer   footer"
-        ;
-        font-size: var(--text-height);
-    }
-
     .header__title {
         text-align: left;
         margin: 0 0 0 24px;

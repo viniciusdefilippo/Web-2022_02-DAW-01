@@ -9,6 +9,7 @@
     font-family: var(--text-font);
     color: var(--main-text-color);
     font-size: var(--responsive-text-height);
+
     display: grid;
     min-height: 100vh;
     grid-template-areas:
@@ -19,3 +20,35 @@
         "footer"
     ;
 }
+
+@media (min-width: 800px) {
+
+    .container {
+        grid-template-areas:
+            "header   header   header"
+            "hero     hero     hero"
+            "timeline timeline nutshell"
+            "footer   footer   footer"
+        ;
+        font-size: var(--text-height);
+    }
+}
+
+/* *************************************
+ *
+ * Organização/Arquitetura Projetos CSS
+ *
+ * *************************************
+ * CSS Guidelines
+ * https://cssguidelin.es/
+ *
+ * CSS Guidelines - Traduzido
+ * https://maujor.com/tutorial/guia-para-escrever-css.php
+ *
+ * BEM (Block - Element - Modifier)
+ * https://getbem.com/
+ *
+ * SMACSS (Scalable and Modular Architecture for CSS)
+ * http://smacss.com/
+ *
+ * ***********************************/
