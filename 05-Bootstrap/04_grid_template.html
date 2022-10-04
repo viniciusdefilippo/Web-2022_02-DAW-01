@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Grid Template Bootstrap</title>
+
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+    <style>
+        h4 {
+            padding: 10px;
+            text-align: center;
+            color: white;
+        }
+
+        header {
+            height: 10vh;
+            background-color: blue;
+        }
+
+        nav {
+            height: 10vh;
+            background-color: brown;
+        }
+
+        section {
+            height: 35vh;
+            background-color: chocolate;
+        }
+
+        article {
+            height: 35vh;
+            background-color: indigo;
+        }
+
+        aside {
+            height: 70vh;
+            background-color: green;
+        }
+
+
+        footer {
+            height: 10vh;
+            background-color: blue;
+            color: white;
+        }
+
+
+        /* Extra small devices (portrait phones, less than 576px) */
+        /* No media query for `xs` since this is the default in Bootstrap */
+
+        /* Small devices (landscape phones, 576px and up) */
+        @media (min-width: 576px) {}
+
+        /* Medium devices (tablets, 768px and up) */
+        @media (min-width: 768px) {}
+
+        /* Large devices (desktops, 992px and up) */
+        @media (min-width: 992px) {}
+
+        /* Extra large devices (large desktops, 1200px and up) */
+        @media (min-width: 1200px) {}
+    </style>
+
+</head>
+
+<body>
+    <div class="container-fluid">
+
+        <div class="row">
+            <div class="col-12">
+                <header>
+                    <h4>Header</h4>
+                </header>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <nav>
+                    <h4>Nav</h4>
+                </nav>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12 col-sm-8">
+                <section>
+                    <h4>Section</h4>
+                </section>
+                <article>
+                    <h4>Article</h4>
+                </article>
+            </div>
+            <div class="col-12 col-sm-4">
+                <aside>
+                    <h4>Aside</h4>
+                </aside>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-12">
+                <footer>
+                    <h4>Footer</h4>
+                </footer>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+    </script>
+</body>
+
+</html>

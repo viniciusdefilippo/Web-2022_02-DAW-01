@@ -1,0 +1,130 @@
+<!doctype html>
+<html lang="pt-br">
+
+<head>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Grid Endpoints</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous">
+
+  <style>
+    /* 
+     * seletor com filtro para que seja aplicado
+     * em todos filhos de row que começam com 'col'
+     */
+    .row>.col,
+    /* 
+     * seletor com filtro para que seja aplicado
+     * em todos filhos de row que começam com 'col-'
+     */
+    .row>[class^=col-] {
+
+      border: solid black 1px;
+      background-color: brown;
+      text-align: center;
+      color: white;
+
+    }
+
+    /* Extra small devices (portrait phones, less than 576px) */
+    /* No media query for `xs` since this is the default in Bootstrap */
+
+    /* Small devices (landscape phones, 576px and up) */
+    @media (min-width: 576px) {
+
+      .row>.col,
+      .row>[class^=col-] {
+        border: solid black 1px;
+        background-color: blue;
+        text-align: center;
+        color: white;
+      }
+    }
+
+    /* Medium devices (tablets, 768px and up) */
+    @media (min-width: 768px) {
+
+      .row>.col,
+      .row>[class^=col-] {
+        border: solid black 1px;
+        background-color: green;
+        text-align: center;
+        color: white;
+      }
+    }
+
+    /* Large devices (desktops, 992px and up) */
+    @media (min-width: 992px) {
+
+      .row>.col,
+      .row>[class^=col-] {
+        border: solid black 1px;
+        background-color: orangered;
+        text-align: center;
+        color: white;
+      }
+    }
+
+    /* Extra large devices (large desktops, 1200px and up) */
+    @media (min-width: 1200px) {}
+  </style>
+
+</head>
+
+<body>
+
+  <div class="container">
+
+    <!-- Linha 1 -->
+    <div class="row">
+      <div class="col-7">
+        <h1>1</h1>
+      </div>
+      <div class="col">
+        <h1>2</h1>
+      </div>
+      <div class="col">
+        <h1>3</h1>
+      </div>
+    </div>
+
+    <!-- Linha 2 -->
+    <div class="row">
+      <div class="col">
+        <h1>1</h1>
+      </div>
+    </div>
+
+    <!-- Linha 3 -->
+    <div class="row">
+      <div class="col-6 col-sm-8 col-lg">
+        <h1>2</h1>
+      </div>
+      <div class="col-6 col-sm-4 col-lg">
+        <h1>3</h1>
+      </div>
+    </div>
+
+    <!-- Linha 4 -->
+    <div class="row">
+      <div class="col-6 offset-sm-2 offset-md-0 col-md-2 col-lg">
+        <h1>4</h1>
+      </div>
+      <div class="col-6 col-sm-4 col-lg">
+        <h1>5</h1>
+      </div>
+      <div class="col-12 col-sm-6 col-lg">
+        <h1>6</h1>
+      </div>
+    </div>
+
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3" crossorigin="anonymous">
+  </script>
+</body>
+
+</html>
