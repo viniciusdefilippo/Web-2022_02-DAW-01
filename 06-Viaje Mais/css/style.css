@@ -1,0 +1,218 @@
+/* caso não funcione no chrome, é necessário habilitar 
+essa propriedade em: chrome://flags/
+pesquisar por Smooth Scrolling e marcar como Enabled */
+html {
+    scroll-behavior: smooth;
+}
+
+/* ======== NAVBAR =========*/
+
+.navbar {
+    background-color: #2C7BBD;
+}
+
+/* ======== SECTION BANNER =========*/
+
+.banner {
+    height: 100vh;
+    /* ref. imagem: https://www.pexels.com/pt-br/foto/alcatrao-alvorecer-amanhecer-arvore-163688/ */
+    background-image: url(../img/capa.jpg);
+    /* aqui alinha nos eixos horizontal e vertical */
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    /*https://www.w3schools.com/css/tryit.asp?filename=trycss_position_relative*/
+    position: relative;
+}
+
+.color-overlay {
+    width: 100%;
+    height: 100%;
+    background: #2C7BBD;
+    opacity: 0.6;
+    /*https://www.w3schools.com/css/tryit.asp?filename=trycss_position_absolute*/
+    position: absolute;
+}
+
+.banner-elementos {
+    margin-top: 30vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    z-index: 1;
+}
+
+.banner h1 {
+    color: gold;
+    font-size: 3.5rem;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.banner p {
+    font-size: 2rem;
+    padding: 0 15px;
+    color: white;
+}
+
+
+/* Small devices (landscape phones, 576px and up) */
+@media (min-width: 576px) {
+
+    .banner h1 {
+        font-size: 4.5rem;
+    }
+
+    .banner p {
+        font-size: 2.5rem;
+    }
+
+}
+
+/* ======== SECTION COMO FUNCIONA =========*/
+
+#como-funciona {
+    background-color: #2C7BBD;
+    color: gold;
+    text-align: center;
+    padding: 80px 30px;
+}
+
+#como-funciona h2 {
+    font-size: 2.5rem;
+    margin-bottom: 80px;
+}
+
+#como-funciona h3 {
+    margin-top: 30px;
+}
+
+#como-funciona p {
+    color: white;
+    margin-bottom: 50px;
+}
+
+#como-funciona .color {
+    color: #2C7BBD;
+}
+
+/* ======== SECTION DESTINOS =========*/
+
+#destinos {
+    margin-top: 50px;
+}
+
+#destinos .card {
+    padding: 5px;
+}
+
+#destinos .card:hover {
+    background-color: rgba(255, 217, 0, 0.6);
+    transition: 1.5s;
+}
+
+
+#destinos h2 {
+    color: #2C7BBD;
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
+#destinos h4 {
+    color: #2C7BBD;
+}
+
+/* ======== SECTION AJUDA =========*/
+
+.jumbotron {
+    margin: 20px 5px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#ajuda .jumbotron {
+    height: 50vh;
+    background-color: gold;
+    color: #2C7BBD;
+}
+
+#ajuda h2 {
+    font-size: 2.5rem;
+}
+
+#ajuda p {
+    font-size: 1.2rem;
+}
+
+#ajuda span {
+    margin-left: 10px;
+}
+
+/* ======== SECTION DESTINOS INTERNACIONAIS =========*/
+
+#destinos-internacionais img {
+    width: 100%;
+    padding: 10px;
+}
+
+#destinos-internacionais {
+    margin: 100px auto;
+}
+
+#destinos-internacionais h2 {
+    font-size: 2.5rem;
+    color: #2C7BBD;
+    text-align: center;
+    padding-bottom: 30px;
+}
+
+/* ======== FOOTER =========*/
+
+footer {
+    text-align: center;
+}
+
+footer h2 {
+    font-size: 2.2rem;
+}
+
+footer .card-body {
+    background-color: #2C7BBD;
+    color: gold;
+}
+
+/* ======== BACK TO TOP =========*/
+
+.back-to-top {
+    background: green;
+    color: white;
+    position: fixed;
+    right: 1rem;
+    bottom: 1rem;
+    padding: 0.5em;
+    font-size: 1.5rem;
+    /* https://developer.mozilla.org/en-US/docs/Web/CSS/clip-path */
+    clip-path: circle();
+    line-height: 0;
+
+    visibility: hidden;
+    opacity: 0;
+
+    transition: 0.3s;
+
+    /* https://www.w3schools.com/css/tryit.asp?filename=trycss3_transform_translate */
+    transform: translateY(100%);
+}
+
+.back-to-top.show {
+    visibility: visible;
+    opacity: 1;
+    transform: translateY(0);
+}
